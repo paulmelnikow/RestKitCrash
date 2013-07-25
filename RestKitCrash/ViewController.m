@@ -92,6 +92,7 @@
     NSEntityDescription *childEntity = [NSEntityDescription entityForName:NSStringFromClass([Child class])
                                                    inManagedObjectContext:context];
     Child *child = [[Child alloc] initWithEntity:childEntity insertIntoManagedObjectContext:context];
+    child.name = @"Ricky";
     [parent addChildrenObject:child];
     
     NSError *error = nil;
